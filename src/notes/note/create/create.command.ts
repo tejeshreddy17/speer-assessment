@@ -1,7 +1,7 @@
 import { Repository } from 'typeorm';
 import { CreateNoteDto } from './create.dto';
-import { Note } from '../entities/note.entity';
 import { InjectRepository } from '@nestjs/typeorm';
+import { Note } from 'src/notes/entities/note.entity';
 
 export class CreateNoteCommand {
   constructor(
@@ -14,6 +14,6 @@ export class CreateNoteCommand {
 
     const savedNote = await this.noteRepository.save(note);
 
-    return savedNote
+    return savedNote;
   }
 }

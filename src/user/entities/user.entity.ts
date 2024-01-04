@@ -7,9 +7,9 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
-// @Index('index_fl_name_user_name', ['firstName', 'lastName', 'userName'], {
-//   unique: true,
-// })
+@Index('index_mailId_userName', ['mailId', 'userName'], {
+  unique: true,
+})
 @Entity('users', { schema: 'speer' })
 export class User {
   @PrimaryGeneratedColumn({ type: 'int', name: 'id' })

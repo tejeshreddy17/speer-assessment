@@ -10,13 +10,13 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
-// @Index('index_userId_content', ['content', 'userId'])
+@Index('index_userId_content', ['content', 'userId'])
 @Entity('notes', { schema: 'speer' })
 export class Note {
   @PrimaryGeneratedColumn({ type: 'int', name: 'id' })
   id: number;
 
-  @Column('text', { name: 'content' })
+  @Column('varchar', { name: 'content', length: 255 })
   content: string;
 
   @Column('int', { name: 'user_id' })

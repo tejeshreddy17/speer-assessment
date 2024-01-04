@@ -1,4 +1,5 @@
 import {
+  IsEmail,
   IsNotEmpty,
   IsString,
   IsStrongPassword,
@@ -22,13 +23,21 @@ export class CreateRegisterUserDto {
   @IsNotEmpty()
   lastName: string;
 
-    /*last name
-     * @example johndoe17
-     */
-    @IsString()
-    @IsNotEmpty()
-    @MinLength(8)
-    userName: string;
+  /*last name
+   * @example johndoe17
+   */
+  @IsString()
+  @IsNotEmpty()
+  @MinLength(8)
+  userName: string;
+
+  /*last name
+   * @example johndoe@mailinator.com
+   */
+  @IsString()
+  @IsNotEmpty()
+  @IsEmail()
+  mailId: string;
 
   /*Strong password with minimum 8 letters with atleast one lower,uppercase, number,special character.
    * @example P0ssw@rd
