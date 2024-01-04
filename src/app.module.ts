@@ -3,6 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { dataSourceOptions } from 'db/data-source';
 import { DataSource } from 'typeorm';
 import { noteModule } from './notes/notes.module';
+import { userModule } from './user/user.module';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { noteModule } from './notes/notes.module';
       },
     }),
     noteModule,
+    userModule,
   ],
   controllers: [],
   providers: [],

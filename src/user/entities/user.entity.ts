@@ -7,6 +7,9 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
+// @Index('index_fl_name_user_name', ['firstName', 'lastName', 'userName'], {
+//   unique: true,
+// })
 @Entity('users', { schema: 'speer' })
 export class User {
   @PrimaryGeneratedColumn({ type: 'int', name: 'id' })
@@ -17,6 +20,12 @@ export class User {
 
   @Column('text', { name: 'last_name' })
   lastName: string;
+
+  @Column('varchar', { name: 'user_name', length: 200 })
+  userName: string;
+
+  @Column('varchar', { name: 'mail_id', length: 200 })
+  mailId: string;
 
   @Column('text', { name: 'crypted_password' })
   cryptedPassword: string;

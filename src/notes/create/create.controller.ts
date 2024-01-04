@@ -5,7 +5,7 @@ import { CreateNoteDto } from './create.dto';
 
 @ApiBearerAuth()
 @Controller('api/notes')
-export class ConsultationNoteController {
+export class CreateNoteController {
   constructor(private readonly command: CreateNoteCommand) {}
 
   @Post()

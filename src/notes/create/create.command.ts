@@ -14,6 +14,6 @@ export class CreateNoteCommand {
 
     const savedNote = await this.noteRepository.save(note);
 
-    return savedNote;
+    return savedNote
   }
 }
