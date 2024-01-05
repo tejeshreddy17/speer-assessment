@@ -12,10 +12,10 @@ export class ApiDocsIndexController {
       <!DOCTYPE html>
       <html>
       <head>
-        <title>ARTis Module APIs</title>
+        <title>Spree Assessment Module APIs</title>
       </head>
       <body>
-        <h1>ARTis Module APIs</h1>
+        <h1>Spree Assessment Module APIs</h1>
         <ul>
         ${SwaggerUIModules.map(
           (moduleName) =>
