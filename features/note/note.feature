@@ -51,7 +51,7 @@ Feature: notes
     }
     """
   Scenario: update a note by its id for un-authenticated user
-    Given I make a PUT request to /api/notes/4
+    Given I make a PUT request to /api/notes/3
     And I set the accessToken in authorization header
     And I set body to
     """
@@ -71,4 +71,4 @@ Feature: notes
     }
     """
     When I receive a response
-    Then I expect response should have a status 404
+    Then I expect response should have a status 400
