@@ -44,7 +44,7 @@ export class AuthenticateUserQuery {
     const isPaswordValid = await argon2.verify(user.cryptedPassword, password);
 
     if (!isPaswordValid) {
-      throw new BadRequestException('Invalid Password');
+      throw new BadRequestException(`Invalid Password`);
     }
 
     authenticatedUser = user;

@@ -1,0 +1,18 @@
+entity: Note
+items:
+  note1:
+    id: 1
+    content: 'Content for Id 1'
+    userId: 1
+  note2:
+    id: 2
+    content: 'Content for Id 2'
+    userId: 1
+  note3:
+    id: 3
+    content: 'Content for Id 3'
+    userId: 2
+  note4:
+    id: 4
+    content: 'Content for Id 4'
+    userId: 1

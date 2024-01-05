@@ -1,0 +1,9 @@
+entity: User
+items:
+  user1:
+    id: 1
+    firstName: 'John'
+    lastName: 'Doe'
+    userName: 'Johndoe17'
+    mailId: 'Johndoe17@mailinator.com'
+    cryptedPassword: '$argon2id$v=19$m=65536,t=3,p=4$M+OcPQ5BuLfbkalVQxH1Iw$DSURajn3AbJBOylaICmAYvknDdtBk0iGgqgztoDOozY'

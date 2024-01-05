@@ -9,6 +9,9 @@ import { TypeORMErrorFilter } from './common/typeorm-error-filter';
 import { CatchAllErrorsFilter } from './common/catch-all-errors.filter';
 import { initializeTransactionalContext } from 'typeorm-transactional';
 import { Logger, LoggerErrorInterceptor } from 'nestjs-pino';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 async function bootstrap() {
   initializeTransactionalContext();
@@ -23,7 +26,9 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe({ whitelist: true }));
   app.useGlobalFilters(new CatchAllErrorsFilter());
 
-  await app.listen(3000);
+  await app.listen(process.env.SERVER_PORT, () => {
+    console.log(`Server listening on ${process.env.SERVER_PORT}`);
+  });
 
   function setupSwaggerUI(app: INestApplication) {
     setupSwaggerUIForModule(app, 'note', noteModule);

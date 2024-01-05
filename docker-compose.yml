@@ -12,5 +12,18 @@ services:
     environment:
       MYSQL_DATABASE: ${DATABASE_NAME}
       MYSQL_ROOT_PASSWORD: ${DATABASE_PASSWORD}
+  test-assessment-db:
+    image: mysql:8.1.0
+    container_name: test-assessment-db
+    ports:
+      - '${DATABASE_PORT}:3306'
+    volumes:
+      - test-assessment-db:/var/lib/mysql
+      # - ./seed-data/test:/docker-entrypoint-initdb.d
+      # - ./seed-data/custom-config:/etc/mysql/conf.d
+    environment:
+      MYSQL_DATABASE: ${DATABASE_NAME}
+      MYSQL_ROOT_PASSWORD: ${DATABASE_PASSWORD}
 volumes:
   assessment-db-data:
+  test-assessment-db:
