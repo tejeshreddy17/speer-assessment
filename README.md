@@ -4,7 +4,7 @@ Speer Assessment for Backend Developer
 
 ## System Requirements
 
-Read documentation for getting started
+Read documentation in docs for getting started
 
 ## Install Packages
 
