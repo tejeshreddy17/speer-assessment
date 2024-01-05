@@ -12,7 +12,7 @@
     "db:dev:rm": "docker compose rm assessment-db -s -f -v",
     "db:dev:up": "docker compose up assessment-db -d",
     "prebuild": "rimraf dist",
-    "db:dev:restart": "yarn db:dev:rm && yarn db:dev:up",
+    "db:dev:restart": "yarn db:dev:rm && yarn db:dev:up && sleep 15 && yarn migration:run",
     "prestart:dev": "yarn db:dev:restart",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",

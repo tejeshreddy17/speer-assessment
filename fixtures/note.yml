@@ -16,3 +16,7 @@ items:
     id: 4
     content: 'Content for Id 4'
     userId: 1
+  searchNote:
+    id: 5
+    content: 'New seach note'
+    userId: 1

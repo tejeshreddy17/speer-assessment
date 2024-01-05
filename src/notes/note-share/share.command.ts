@@ -31,7 +31,6 @@ export class ShareNoteCommand {
     });
 
     await this.noteShareRepository.save(noteShare);
-
-    return { message: `Note shared to user with id ${toBeSharedUserId}` };
+    return { message: `Note shared with user having id ${toBeSharedUserId}` };
   }
 }
